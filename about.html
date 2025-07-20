@@ -1,1 +1,161 @@
-gfp
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เกี่ยวกับเรา | 2Hand-s</title>
+    <style>
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffe6f0 0%, #fff 100%);
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8b7dd;
+            color: #fff;
+            padding: 12px 40px;
+            box-shadow: 0 2px 8px rgba(248,183,221,0.15);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .logo-img {
+            width: 44px;
+            height: 44px;
+            margin-right: 12px;
+        }
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            display: inline;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            transition: color 0.2s;
+        }
+        .menu a:hover {
+            color: #e75480;
+        }
+        .about-section {
+            max-width: 700px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(248,183,221,0.15);
+            padding: 48px 36px;
+            text-align: center;
+            position: relative;
+        }
+        .about-title {
+            color: #e75480;
+            font-size: 2.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .about-desc {
+            font-size: 1.2em;
+            margin-bottom: 36px;
+            color: #555;
+            line-height: 1.8;
+        }
+        .about-highlight {
+            background: linear-gradient(90deg, #f8b7dd 0%, #ffe6f0 100%);
+            color: #e75480;
+            padding: 10px 0;
+            border-radius: 12px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            font-size: 1.1em;
+        }
+        .about-story {
+            font-size: 1.1em;
+            color: #e75480;
+            margin-bottom: 16px;
+        }
+        .footer {
+            background: #f8b7dd;
+            color: #fff;
+            text-align: center;
+            padding: 24px 0;
+            margin-top: 40px;
+        }
+        /* เพิ่มลายเส้นตกแต่ง */
+        .about-section::before, .about-section::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg"><ellipse cx="40" cy="40" rx="36" ry="18" fill="%23f8b7dd" opacity="0.2"/></svg>');
+            z-index: 0;
+        }
+        .about-section::before {
+            top: -30px;
+            left: -30px;
+        }
+        .about-section::after {
+            bottom: -30px;
+            right: -30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- โลโก้รูปดาวสไตล์การ์ตูน (SVG) -->
+            <svg class="logo-img" viewBox="0 0 64 64" fill="none">
+                <polygon points="32,10 38,26 55,26 41,36 46,52 32,42 18,52 23,36 9,26 26,26"
+                    fill="#f8b7dd" stroke="#e75480" stroke-width="2"/>
+                <polygon points="32,16 36,26 47,26 38,33 41,44 32,37 23,44 26,33 17,26 28,26"
+                    fill="#fff" opacity="0.7"/>
+            </svg>
+            2Hand-s
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="Product.html">สินค้า</a></li>
+            <li><a href="blog.html">บทความ</a></li>
+            <li><a href="contact.html">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-title">เกี่ยวกับร้าน 2Hand-s</div>
+        <div class="about-highlight">
+            ร้านเสื้อผ้ามือสองสำหรับผู้หญิง ที่เน้นความน่ารัก สดใส และรักษ์โลก
+        </div>
+        <div class="about-desc">
+            <span class="about-story">
+                ร้าน 2Hand-s ก่อตั้งโดยกลุ่มเพื่อนผู้หญิง 5 คน ที่มีใจรักแฟชั่นและสิ่งแวดล้อม<br>
+                เราเชื่อว่าการแต่งตัวสวยในราคาสบายกระเป๋า สามารถช่วยโลกได้ด้วยการเลือกใช้เสื้อผ้ามือสองคุณภาพดี<br>
+                ทุกชิ้นผ่านการคัดสรรอย่างพิถีพิถันในโทนสีชมพูและขาว เพื่อให้สาวๆ ได้สนุกกับการแต่งตัวและร่วมเป็นส่วนหนึ่งในการลดขยะแฟชั่น
+            </span>
+            <br><br>
+            <b>“สวยได้ รักษ์โลกด้วย”</b><br>
+            ขอบคุณที่ร่วมเป็นส่วนหนึ่งกับเรา
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 2Hand-s. สงวนลิขสิทธิ์
+    </footer>
+</body>
+</html>
