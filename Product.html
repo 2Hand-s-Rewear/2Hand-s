@@ -1,1 +1,315 @@
-แตงโม แตงโหม่ แตงโม
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สินค้า | 2Hand-s</title> 
+    <style>
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.7);
+            box-shadow: 0 8px 32px rgba(231,115,166,0.10);
+            border-radius: 32px;
+            padding: 32px 0 48px 0;
+            position: relative;
+            backdrop-filter: blur(4px);
+        }
+        .banner {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(252,183,212,0.12);
+            margin-bottom: 32px;
+        }
+        .category-bar {
+            margin-bottom: 32px;
+        }
+        .section-title {
+            margin-top: 16px;
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fdf6f9;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #fcb7d4 0%, #f7c6e0 100%);
+            padding: 0 40px;
+            height: 80px;
+            box-shadow: 0 2px 8px rgba(252,183,212,0.08);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 54px;
+            margin-right: 14px;
+        }
+        .logo span {
+            color: #d16ba5;
+            font-size: 1.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .menu {
+            display: flex;
+            gap: 36px;
+        }
+        .menu a {
+            color: #d16ba5;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 8px 0;
+        }
+        .menu a:hover {
+            color: #fff;
+            background: #d16ba5;
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+        .banner {
+            width: 100vw;
+            height: 100vh;
+            min-height: 400px;
+            background: #fff0f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(252,183,212,0.08);
+            margin-bottom: 48px;
+            overflow: hidden;
+        }
+        .banner img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            border-radius: 0;
+            box-shadow: none;
+            display: block;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.3rem;
+            font-weight: 900;
+            margin-bottom: 24px;
+            color: #d16ba5;
+            font-family: 'Segoe UI', 'Quicksand', 'Kanit', Arial, sans-serif;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 12px #f7c6e0;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            padding: 0 40px 40px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: linear-gradient(135deg, #ffe4ec 0%, #f7c6e0 100%);
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(231,115,166,0.08);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            position: relative;
+        }
+        .product-card:hover {
+            box-shadow: 0 6px 24px rgba(231,115,166,0.18);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .product-card img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            background: #fff;
+            border: 2px solid #f7c6e0;
+        }
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #d16ba5;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+        .product-price {
+            color: #e573a6;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        .product-btn {
+            background: #e573a6;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: auto;
+        }
+        .product-btn:hover {
+            background: #d16ba5;
+        }
+        .article-section {
+            background: #fff0f6;
+            padding: 40px 0;
+            margin: 40px 0 0 0;
+        }
+        .articles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(231,115,166,0.08);
+            padding: 24px;
+            max-width: 340px;
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .article-title {
+            color: #d16ba5;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .article-desc {
+            color: #555;
+            font-size: 1rem;
+        }
+        footer {
+            background: linear-gradient(90deg, #fcb7d4 0%, #f7c6e0 100%);
+            color: #d16ba5;
+            text-align: center;
+            padding: 32px 0 16px 0;
+            font-size: 1rem;
+            margin-top: 48px;
+        }
+        .footer-links {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            color: #d16ba5;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <!-- โลโก้รูปดาวสไตล์การ์ตูน (SVG) -->
+            <svg class="logo-img" viewBox="0 0 64 64" fill="none" style="height:54px;width:54px;margin-right:14px;vertical-align:middle;">
+                <polygon points="32,10 38,26 55,26 41,36 46,52 32,42 18,52 23,36 9,26 26,26"
+                    fill="#f8b7dd" stroke="#e75480" stroke-width="2"/>
+                <polygon points="32,16 36,26 47,26 38,33 41,44 32,37 23,44 26,33 17,26 28,26"
+                    fill="#fff" opacity="0.7"/>
+            </svg>
+            <span style="color:#ffffff;font-size:1.7rem;font-weight:bold;letter-spacing:1px;">2Hand-s</span>
+        </div>
+        <div class="menu">
+            <a href="Home.html">หน้าแรก</a>
+            <a href="about.html">เกี่ยวกับเรา</a>
+            <a href="Product.html">สินค้า</a>
+            <a href="Article.html">บทความ</a>
+            <a href="contact.html">ติดต่อเรา</a>
+        </div>
+    </nav>
+    <div class="banner">
+        <img src="5.png" alt="ร้านเสื้อผ้ามินิมอล">
+    </div>
+    <div class="section-title">สินค้าแนะนำ</div>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="เดรสแฟชั่นผู้หญิง">
+            <div class="product-name">เดรสแฟชั่นลายดอก</div>
+            <div class="product-price">฿290</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="เสื้อเบลาส์ผู้หญิง">
+            <div class="product-name">เสื้อเบลาส์แขนตุ๊กตา</div>
+            <div class="product-price">฿180</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="เสื้อเชิ้ตผู้หญิง">
+            <div class="product-name">เสื้อเชิ้ตโอเวอร์ไซส์</div>
+            <div class="product-price">฿220</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="กางเกงขาสั้นผู้หญิง">
+            <div class="product-name">กางเกงขาสั้นแฟชั่น</div>
+            <div class="product-price">฿150</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="กระโปรงพลีท">
+            <div class="product-name">กระโปรงพลีทสั้น</div>
+            <div class="product-price">฿200</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="เสื้อฮู้ดผู้หญิง">
+            <div class="product-name">เสื้อฮู้ดแฟชั่น</div>
+            <div class="product-price">฿250</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="เสื้อโค้ทผู้หญิง">
+            <div class="product-name">เสื้อโค้ทกันหนาว</div>
+            <div class="product-price">฿390</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="เสื้อยืดแฟชั่น">
+            <div class="product-name">เสื้อยืดลายกราฟิกผู้หญิง</div>
+            <div class="product-price">฿160</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="เดรสยาวผู้หญิง">
+            <div class="product-name">เดรสยาวแฟชั่น</div>
+            <div class="product-price">฿320</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="เสื้อแขนกุดผู้หญิง">
+            <div class="product-name">เสื้อแขนกุดแฟชั่น</div>
+            <div class="product-price">฿120</div>
+            <button class="product-btn">ดูรายละเอียด</button>
+        </div>
+    </div>
+    <!-- ลบบทความแนะนำออกตามคำขอ -->
+   <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 2Hand-s. สงวนลิขสิทธิ์
+    </footer>
+</body>
+</html>
