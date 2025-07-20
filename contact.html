@@ -1,3 +1,188 @@
-jgifodjguigerjgklekgejgi jaaaaaaaaaaaaaa
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ติดต่อเรา | ร้านขายเสื้อผ้า 2Hand-s</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+        body {
+            font-family: 'Prompt', Arial, sans-serif;
+            background: linear-gradient(135deg, #fff1f7 0%, #e0e7ff 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            width: 100%;
+            background: #ffb6d5;
+            box-shadow: 0 2px 12px rgba(255,182,213,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 32px;
+            height: 68px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo svg {
+            width: 38px;
+            height: 38px;
+            margin-right: 10px;
+        }
+        .navbar .logo span {
+            font-size: 1.35em;
+            font-weight: 600;
+            color: #e11d48;
+            letter-spacing: 1px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li {
+            margin: 0 12px;
+        }
+        .navbar a {
+            display: block;
+            padding: 12px 0;
+            color: #e11d48;
+            text-decoration: none;
+            font-size: 1.08em;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-bottom 0.2s;
+        }
+        .navbar a:hover, .navbar .active {
+            color: #be185d;
+            border-bottom: 2.5px solid #e11d48;
+        }
+        .contact-container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 32px rgba(255,182,213,0.13);
+            padding: 44px 34px 36px 34px;
+            border: 2px solid #ffe4ef;
+        }
+        h1 {
+            color: #e11d48;
+            text-align: center;
+            margin-bottom: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .contact-info {
+            margin-bottom: 28px;
+            color: #374151;
+            font-size: 1.08em;
+            background: #fff6fa;
+            border-radius: 10px;
+            padding: 18px 18px 10px 18px;
+            border-left: 4px solid #ffb6d5;
+        }
+        .contact-info strong {
+            color: #e11d48;
+        }
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            color: #be185d;
+            font-weight: 500;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1.5px solid #ffb6d5;
+            border-radius: 8px;
+            font-size: 1em;
+            background: #fff6fa;
+            transition: border 0.2s;
+        }
+        form input:focus, form textarea:focus {
+            border: 1.5px solid #e11d48;
+            outline: none;
+        }
+        form button {
+            background: linear-gradient(90deg, #ffb6d5 0%, #e11d48 100%);
+            color: #fff;
+            border: none;
+            padding: 13px 0;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(255,182,213,0.13);
+            transition: background 0.2s;
+        }
+        form button:hover {
+            background: linear-gradient(90deg, #e11d48 0%, #ffb6d5 100%);
+        }
+        @media (max-width: 700px) {
+            .contact-container {
+                padding: 20px 8px;
+            }
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 10px 0 0 0;
+            }
+            .navbar ul {
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+     <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- โลโก้รูปดาวสไตล์การ์ตูน (SVG) -->
+            <svg class="logo-img" viewBox="0 0 64 64" fill="none">
+                <polygon points="32,10 38,26 55,26 41,36 46,52 32,42 18,52 23,36 9,26 26,26"
+                    fill="#f8b7dd" stroke="#e75480" stroke-width="2"/>
+                <polygon points="32,16 36,26 47,26 38,33 41,44 32,37 23,44 26,33 17,26 28,26"
+                    fill="#fff" opacity="0.7"/>
+            </svg>
+            <span>2Hand-s</span>
+        </div>
+        <ul>
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="about.html">เกี่ยวกับเรา</a></li>
+            <li><a href="products.html">สินค้า</a></li>
+            <li><a href="blog.html">บทความ</a></li>
+            <li><a href="contact.html" class="active">ติดต่อเรา</a></li>
+        </ul>
+    </nav>
+    <div class="contact-container">
+        <h1>ติดต่อเรา</h1>
+        <div class="contact-info">
+            <p><strong>ร้าน 2Hand-s</strong> - ร้านขายเสื้อผ้ามือสองคุณภาพดี ราคาสบายกระเป๋า</p>
+            <p>โทร: <a href="tel:0812345678" style="color:#e11d48;text-decoration:none;">081-234-5678</a></p>
+            <p>อีเมล: <a href="mailto:2hands.shop@email.com" style="color:#e11d48;text-decoration:none;">2hands.shop@email.com</a></p>
+            <p>ที่อยู่: 123/45 ถนนแฟชั่น แขวงสไตล์ เขตเมืองใหม่ กรุงเทพฯ 10200</p>
+        </div>
+        <form>
+            <label for="name">ชื่อของคุณ</label>
+            <input type="text" id="name" name="name" required>
 
-haaaaaaaaaaaaa
+            <label for="email">อีเมล</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">ข้อความ</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+    </div>
+    <footer style="background:#ffb6d5; color:#fff; text-align:center; padding:22px 0 16px 0; margin-top:48px; font-size:1em;">
+        &copy; 2025 ร้าน 2Hand-s | ขายเสื้อผ้ามือสองคุณภาพดี
+    </footer>
+</body>
+</html>
