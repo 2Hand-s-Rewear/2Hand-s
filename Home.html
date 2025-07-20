@@ -1,3 +1,288 @@
-saiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>2Hand-s ร้านเสื้อผ้ามือสอง</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #fff; }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ff69b4;
+            padding: 10px 40px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 48px;
+            margin-right: 12px;
+        }
+        .menu {
+            display: flex;
+            gap: 32px;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .menu a:hover {
+            color: #fffacd;
+        }
+        .banner-carousel {
+            width: 100%;
+            height: 320px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+        .banner-slide {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 1;
+            transition: opacity 1s;
+        }
+        .section {
+            max-width: 1100px;
+            margin: 0 auto 40px auto;
+            padding: 0 20px;
+        }
+        .products {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        .product-card {
+            background: #fff0f6;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(255,105,180,0.12);
+            padding: 28px;
+            width: 280px;
+            text-align: center;
+            font-size: 20px;
+        }
+        .product-card img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 18px;
+        }
+        .articles {
+            margin-bottom: 40px;
+        }
+        .article-card {
+            background: #ffe4ee;
+            border-radius: 14px;
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 8px rgba(255,105,180,0.12);
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 20px;
+        }
+        .article-card img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .footer {
+            background: #ff69b4;
+            color: #fff;
+            text-align: center;
+            padding: 24px 0 12px 0;
+            margin-top: 40px;
+        }
+        .footer small {
+            color: #fffacd;
+        }
+        .category-popup {
+            background: #fff0f6;
+            border-radius: 12px;
+            padding: 24px 40px;
+            font-size: 20px;
+            color: #e75480;
+            box-shadow: 0 2px 8px rgba(255,105,180,0.12);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            position: relative;
+        }
+        .category-popup:hover {
+            transform: scale(1.12);
+            box-shadow: 0 8px 24px rgba(255,105,180,0.18);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+   <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- โลโก้รูปดาวสไตล์การ์ตูน (SVG) -->
+            <svg class="logo-img" viewBox="0 0 64 64" width="48" height="48" fill="none">
+                <polygon points="32,10 38,26 55,26 41,36 46,52 32,42 18,52 23,36 9,26 26,26"
+                    fill="#f8b7dd" stroke="#e75480" stroke-width="2"/>
+                <polygon points="32,16 36,26 47,26 38,33 41,44 32,37 23,44 26,33 17,26 28,26"
+                    fill="#fff" opacity="0.7"/>
+            </svg>
+            <span style="font-size: 22px; font-weight: bold; color: #fff;">2Hand-s</span>
+        </div>
+        <div class="menu">
+            <a href="#">หน้าแรก</a>
+            <a href="#">เกี่ยวกับเรา</a>
+            <a href="#">สินค้า</a>
+            <a href="#">บทความ</a>
+            <a href="#">ติดต่อเรา</a>
+        </div>
+    </nav>
 
-Hubb
+    <!-- Banner (Carousel) -->
+    <div class="banner-carousel" style="width:100%; height:320px; position:relative; overflow:hidden; margin-bottom:32px;">
+        <img class="banner-slide" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:320px; object-fit:cover; position:absolute; left:0; top:0; opacity:1; transition:opacity 1s;">
+        <img class="banner-slide" src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80" style="width:100%; height:320px; object-fit:cover; position:absolute; left:0; top:0; opacity:0; transition:opacity 1s;">
+    </div>
+    <script>
+    let currentBanner = 0;
+    const slides = document.querySelectorAll('.banner-slide');
+    setInterval(() => {
+        slides[currentBanner].style.opacity = 0;
+        currentBanner = (currentBanner + 1) % slides.length;
+        slides[currentBanner].style.opacity = 1;
+    }, 3500);
+    </script>
+
+    <div class="section">
+        <!-- สินค้าแนะนำ -->
+        <h2 style="color:#ff69b4; text-align:center;">สินค้าแนะนำ</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="img/barbe.jpg" alt="เสื้อแขนบาร์บี้">
+                <div>ชุดกระโปรงแขนบาร์บี้</div>
+                <div>฿120</div>
+                <button style="margin-top:12px; background:#ff69b4; color:#fff; border:none; border-radius:8px; padding:8px 20px; font-size:16px; cursor:pointer;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                        <path d="M6 6h15l-1.5 9h-13z" stroke="#fff" stroke-width="2" fill="#ffb6d5"/>
+                        <circle cx="9" cy="21" r="1.5" fill="#fff"/>
+                        <circle cx="18" cy="21" r="1.5" fill="#fff"/>
+                    </svg>
+                    หยิบใส่ตะกร้า
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="img/set.jpg" alt="ชุดเซ็ต">
+                <div>ชุดเซ็ต</div>
+                <div>฿180</div>
+                <button style="margin-top:12px; background:#ff69b4; color:#fff; border:none; border-radius:8px; padding:8px 20px; font-size:16px; cursor:pointer;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                        <path d="M6 6h15l-1.5 9h-13z" stroke="#fff" stroke-width="2" fill="#ffb6d5"/>
+                        <circle cx="9" cy="21" r="1.5" fill="#fff"/>
+                        <circle cx="18" cy="21" r="1.5" fill="#fff"/>
+                    </svg>
+                    หยิบใส่ตะกร้า
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="img/dres.jpg" alt="เดรส">
+                <div>ชุดเดรส</div>
+                <div>฿150</div>
+                <button style="margin-top:12px; background:#ff69b4; color:#fff; border:none; border-radius:8px; padding:8px 20px; font-size:16px; cursor:pointer;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                        <path d="M6 6h15l-1.5 9h-13z" stroke="#fff" stroke-width="2" fill="#ffb6d5"/>
+                        <circle cx="9" cy="21" r="1.5" fill="#fff"/>
+                        <circle cx="18" cy="21" r="1.5" fill="#fff"/>
+                    </svg>
+                    หยิบใส่ตะกร้า
+                </button>
+            </div>
+        </div>
+
+        <!-- สินค้าราคาพิเศษ -->
+        <h2 style="color:#e75480; margin-top:48px; text-align:center;">สินค้าราคาพิเศษ</h2>
+        <div class="products">
+            <div class="product-card" style="border:2px solid #e75480;">
+                <img src="img/jacket.jpg" alt="เสื้อแจ็คเก็ต">
+                <div>เสื้อแจ็คเก็ต</div>
+                <div style="color:#e75480; font-weight:bold;">฿99 <span style="text-decoration:line-through; color:#888; font-size:16px;">฿180</span></div>
+                <button style="margin-top:12px; background:#e75480; color:#fff; border:none; border-radius:8px; padding:8px 20px; font-size:16px; cursor:pointer;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                        <path d="M6 6h15l-1.5 9h-13z" stroke="#fff" stroke-width="2" fill="#ffb6d5"/>
+                        <circle cx="9" cy="21" r="1.5" fill="#fff"/>
+                        <circle cx="18" cy="21" r="1.5" fill="#fff"/>
+                    </svg>
+                    หยิบใส่ตะกร้า
+                </button>
+            </div>
+            <div class="product-card" style="border:2px solid #e75480;">
+                <img src="img/bon.jpg" alt="กางเกงขาสั้น">
+                <div>กางเกงขาสั้น</div>
+                <div style="color:#e75480; font-weight:bold;">฿79 <span style="text-decoration:line-through; color:#888; font-size:16px;">฿150</span></div>
+                <button style="margin-top:12px; background:#e75480; color:#fff; border:none; border-radius:8px; padding:8px 20px; font-size:16px; cursor:pointer;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="vertical-align:middle; margin-right:6px;">
+                        <path d="M6 6h15l-1.5 9h-13z" stroke="#fff" stroke-width="2" fill="#ffb6d5"/>
+                        <circle cx="9" cy="21" r="1.5" fill="#fff"/>
+                        <circle cx="18" cy="21" r="1.5" fill="#fff"/>
+                    </svg>
+                    หยิบใส่ตะกร้า
+                </button>
+            </div>
+        </div>
+
+        <!-- แบรนด์ยอดนิยม -->
+        <h2 style="color:#e75480; margin-top:48px; text-align:center;">แบรนด์ยอดนิยม</h2>
+        <div style="display:flex; gap:64px; justify-content:center; margin-bottom:48px;">
+            <img src="img/nike.jpg" alt="Nike" style="height:120px;">
+            <img src="img/Adidas.jpg" alt="Adidas" style="height:120px;">
+            <img src="img/Uniqlo.png" alt="Uniqlo" style="height:120px;">
+            <img src="img/H&M.jpg" alt="H&M" style="height:120px;">
+        </div>
+
+        <!-- หมวดหมู่สินค้า -->
+        <h2 style="color:#e75480; margin-top:48px; text-align:center;">หมวดหมู่สินค้า</h2>
+        <div style="display:flex; gap:32px; justify-content:center; margin-bottom:32px;">
+            <div class="category-popup">เสื้อผ้าแฟชั่น</div>
+            <div class="category-popup">กางเกง</div>
+            <div class="category-popup">กระโปรง</div>
+            <div class="category-popup">เดรส</div>
+            <div class="category-popup">เสื้อคลุม</div>
+        </div>
+        <!-- บทความ -->
+        <h2 style="color:#ff69b4; text-align:center;">บทความ</h2>
+        <div class="articles">
+            <div class="article-card" style="display: flex; align-items: center; gap: 18px;">
+                <img src="img/met.jpg" alt="เทคนิคการแมทช์เสื้อผ้า" style="width:120px; height:120px; object-fit:cover; border-radius:8px;">
+                <div>
+                    <h3>เทคนิคการแมทช์เสื้อผ้าให้ดูดี</h3>
+                    <p>เลือกสีที่เข้ากัน เพิ่มลูกเล่นด้วยเครื่องประดับ และใส่ใจในสไตล์ของตัวเอง จะช่วยให้การแต่งตัวดูโดดเด่นและมั่นใจมากขึ้น</p>
+                </div>
+            </div>
+            <div class="article-card" style="display: flex; align-items: center; gap: 18px;">
+                <img src="img/minimal.jpg" alt="ไอเดียแต่งตัวมินิมอล" style="width:120px; height:120px; object-fit:cover; border-radius:8px;">
+                <div>
+                    <h3>ไอเดียแต่งตัวมินิมอลสำหรับทุกวัน</h3>
+                    <p>เลือกเสื้อผ้าสีพื้นเรียบง่าย แมทช์กับกางเกงหรือกระโปรงทรงตรง เพิ่มความเก๋ด้วยรองเท้าผ้าใบหรือกระเป๋าสีสดใส</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>2Hand-s ร้านเสื้อผ้ามือสองสไตล์มินิมอล</div>
+        <small>© 2025 2Hand-s. All rights reserved.</small>
+    </footer>
+</body>
+</html>
+
